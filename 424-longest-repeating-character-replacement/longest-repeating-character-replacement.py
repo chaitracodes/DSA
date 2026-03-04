@@ -4,7 +4,13 @@ Return the length of the longest substring containing the same letter you can ge
 
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        
+        """ Approach:
+        - Use a sliding window with two pointers (l and r).
+        - Keep a hashmap to store the frequency of characters in the current window.
+        - Track the count of the most frequent character (maxf) in the window.
+        - If the number of characters that need replacement (window size - maxf) exceeds k,
+        - shrink the window from the left.
+        - Update the maximum valid window length at each step."""
         mp = {}
         l = 0
         maxf = 0
