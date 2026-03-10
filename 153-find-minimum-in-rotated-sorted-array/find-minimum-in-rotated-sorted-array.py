@@ -1,6 +1,6 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        """# Approach:
+        """- Approach:
         - Use binary search on the rotated sorted array.
         - If the current segment is sorted, nums[l] is the minimum.
         - Otherwise move towards the unsorted half to find the pivot."""
