@@ -3,11 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        red = 0
-        white = 1
-        blue = 2
+        l, r = 0 , len(nums) - 1
+        m = 0
 
-        for n in nums:
-            nums.sort()
+        while m <= r:
+            if nums[m] == 0:
+                nums[m] , nums[l] = nums[l] , nums[m]
+                l += 1
+                m += 1
+            elif nums[m] == 1:
+                m += 1  
+            else:
+                nums[r] , nums[m] = nums[m] , nums[r] 
+                r -= 1
 
-        
